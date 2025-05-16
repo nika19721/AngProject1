@@ -1,0 +1,19 @@
+<div class="categories" (click)="GetCatergory1()">
+    <button class="Button2">Categories</button>
+
+    <div *ngFor="let el of CategoryGet3">
+        <button class="Button3" (click)="FilterProductsLocally(el.id)">{{el.name}}</button>
+    </div>
+        <button class="Button4" (click)="ReturnToOriginal()">All</button>
+</div>
+
+
+<div class="Parent">
+    <div class="CardBox" *ngFor="let el of ProductsArr">
+        <img [src]="el.image" alt="">
+        <h1>{{el.name}}</h1>
+        <h2>{{el.spiciness}} Spiciness</h2>
+        <h3>{{el.price}}$</h3>
+        <button class="Button1">Add to Basket</button>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+.Parent{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    img{
+        width: 250px;
+    }
+
+}
+.CardBox{
+    height:500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(234, 255, 176);
+    .Button1{
+        width: 120px;
+        height: 35px;
+        border: 1px solid black;
+        border-radius: 10px;
+        outline: none;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+
+
+    }
+}
+.categories{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    button{
+        width: 140px;
+        height: 25px;
+    }
+}
+
+.Button2{
+    width: 120px;
+    height: 25px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.Button3{
+    cursor: pointer;
+}
+.Button4{
+    cursor: pointer;
+}
