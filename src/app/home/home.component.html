@@ -1,10 +1,21 @@
-<div class="categories" (click)="GetCatergory1()">
+<div class="ThatParent">
+    <div class="Parrent3">
+    <div class="categories" (click)="GetCatergory1()">
     <button class="Button2">Categories</button>
 
-    <div *ngFor="let el of CategoryGet3">
-        <button class="Button3" (click)="FilterProductsLocally(el.id)">{{el.name}}</button>
+    <div class="THEParrent" *ngFor="let el of CategoryGet3">
+        <div class="ButtonParrent">
+            <h3 class="Button3" (click)="FilterProductsLocally(el.id)">{{el.name}}</h3>
+        </div>
     </div>
         <button class="Button4" (click)="ReturnToOriginal()">All</button>
+</div>
+    <!-- <div class="FilterParent">
+        <label for="Spiciness"></label>
+        <input type="range" id="Spiciness" min="0" max="4" placeholder="Nuts" [(ngModel)]="spiciness">
+        <input type="range" name="" id="" placeholder="Vegetarian" [(ngModel)]="vegetarian">
+        <button (click)="FilterSpiciness(Categoryid, spiciness)">Filter</button>
+    </div> -->
 </div>
 
 
@@ -14,6 +25,7 @@
         <h1>{{el.name}}</h1>
         <h2>{{el.spiciness}} Spiciness</h2>
         <h3>{{el.price}}$</h3>
-        <button class="Button1">Add to Basket</button>
+        <button class="Button1" (click)="addToBasket(el.id, el.price)">Add to Basket</button>
     </div>
+</div>
 </div>

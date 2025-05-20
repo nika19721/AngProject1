@@ -1,10 +1,18 @@
 .Parent{
-    width: 100%;
+    width: 87%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     img{
         width: 250px;
     }
+}
+.THEParrent{
+    width: 70%;
+}
+.ThatParent{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(225, 255, 150);
 
 }
 .CardBox{
@@ -13,6 +21,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     gap: 15px;
     border: 1px solid black;
     border-radius: 10px;
@@ -29,15 +38,27 @@
 
 
     }
+    .Button1:hover{
+        transition: 0.4s;
+        background-color: white;
+        color: black;
+    }
 }
 .categories{
+    width: 188px;
+    position: fixed;
+    height: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    button{
+    gap: 20px;
+    background-color: rgb(225, 255, 150);
+    .Button2{
         width: 140px;
-        height: 25px;
+        height: 35px;
+        background-color: white;
+        color: black;
     }
 }
 
@@ -48,8 +69,110 @@
     cursor: pointer;
 }
 .Button3{
+    height: 45px;
+    border: 1px solid rgb(111, 43, 43);
+    border-radius: 4px;
+    font-size: 17px;
+    text-align: center;
+    text-decoration: underline;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
     cursor: pointer;
+    
+}
+.Parrent3{
+    background-color: rgb(225, 255, 150);
+}
+.Button4{
+    width: 140px;
+    height: 35px;
+    background-color: white;
+    color: black;
+}
+.Button3:hover{
+    transition: 0.4s;
+    color: brown;
+    text-decoration: underline white;
 }
 .Button4{
     cursor: pointer;
+}
+.Categories3{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+@media screen and (max-width:1300px) {
+    .Parent{
+        grid-template-columns: 1fr 1fr;
+    }
+    .Button3{
+        height: 60px;
+        font-size: 20px;
+    }
+        .THEParrent{
+        width: 70%;
+    }
+    .categories{
+        width: 150px;
+        height: auto;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 20px 0;
+    }
+    
+}
+@media screen and (max-width:1200px) {
+    .Parent{
+        width: 82%;
+    }
+}
+@media screen and (max-width:900px) {
+    .Parent{
+        grid-template-columns: 1fr;
+        width: 75%;
+    }
+    .categories{
+        padding: 20px 0;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .Parent{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .Parent{
+        width: 65%;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .categories{
+        width: 118px;
+          .Button2{
+        width: 100px;
+    }
+    .Button4{
+        width: 100px;
+    }
+    }
+    .CardBox{
+        h1{
+            font-size: 20px;
+        }
+    }
+    .Parent{
+        img{
+            width: 225px;
+        }
+    }
+  
 }

@@ -1,3 +1,17 @@
-<h1>Hello</h1>
 
-<button (click)="AddToBasket(1, 50)">Hiiii</button>
+<div>
+    <div class="Parrent1" *ngFor="let el of getBasketts">
+        <div class="ImgParent">
+        <img [src]="el.product.image" alt="">
+        </div>
+        <h1>{{el.product.name}}</h1>
+        <div class="Parrent2">
+        <p class="Dollarclass">{{el.price}}$</p>
+            <div class="ButtonParents1">
+        <button class="Buttonn1" (click)="Increase(el.quantity, el.product.id, el.product.price)">+</button>
+        <button class="Buttonn1" (click)="Decrease(el.quantity, el.product.id, el.product.price)">-</button>
+            </div>
+        <button class="DeleteButton" (click)="deletebasket(el.product.id)">Delete This Product</button>
+        </div>
+    </div>
+</div>
