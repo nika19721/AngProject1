@@ -6,6 +6,16 @@
         width: 250px;
     }
 }
+.Parrentt1{
+    width: 87%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.clas{
+    display: flex;
+}
 .THEParrent{
     width: 70%;
 }
@@ -15,6 +25,7 @@
     background-color: rgb(225, 255, 150);
 
 }
+
 .CardBox{
     height:500px;
     display: flex;
@@ -84,14 +95,98 @@
     cursor: pointer;
     
 }
-.Parrent3{
+.Parrent4{
     background-color: rgb(225, 255, 150);
+        position: fixed;
+    height: auto;
+        width: 188px;
+    position: fixed;
+    height: auto;
+
+    gap: 20px;
+    background-color: rgb(225, 255, 150);
+    .Button2{
+        width: 140px;
+        height: 35px;
+        background-color: white;
+        color: black;
+    }
+}
+.FilterParent{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+       .inp1 {
+    -webkit-appearance: none;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+    .FilterParrent1{
+        width: 500px;
+        height: 150px;
+        background-color: rgb(35, 34, 34);
+        color: white;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+        border: 1px solid black;
+        .labelParent{
+            display: flex;
+            gap: 5px;
+            justify-content: center;
+
+        }
+        .spicinessparent{
+            display: flex;
+            justify-content: center;
+                .Spiciness1{
+                height: 20px;
+                background-color: red;
+                border-radius: 10px;
+            }
+        }
+
+        h1{
+            font-size: 17px;
+        }
+    }
+}
+
+.FilterProductss{
+    color: white;
+    border: 1px solid black;
+    background-color: black;
+    font-size: 24px;
+    cursor: pointer;
+}
+.filterbutton{
+    width: 120px;
+    height: 20px;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.resetbutton{
+        width: 120px;
+    height: 20px;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 4px;
 }
 .Button4{
     width: 140px;
     height: 35px;
     background-color: white;
     color: black;
+}
+.Sidebar{
+    display: flex;
+    flex-direction: column;
+    gap: 1000px;
 }
 .Button3:hover{
     transition: 0.4s;
@@ -112,8 +207,8 @@
         grid-template-columns: 1fr 1fr;
     }
     .Button3{
-        height: 60px;
-        font-size: 20px;
+        height: 40px;
+        font-size: 16px;
     }
         .THEParrent{
         width: 70%;
@@ -140,6 +235,9 @@
     .categories{
         padding: 20px 0;
     }
+        .FilterParrent1{
+        width: 300px !important;
+    }
 }
 
 @media screen and (max-width:700px) {
@@ -152,6 +250,9 @@
     .Parent{
         width: 65%;
     }
+    .FilterParrent1 {
+        width: 190px !important;
+    }
 }
 
 @media screen and (max-width:550px) {
@@ -159,6 +260,9 @@
         width: 118px;
           .Button2{
         width: 100px;
+    }
+    .FilterParrent1{
+        margin-left: 43px !important;
     }
     .Button4{
         width: 100px;

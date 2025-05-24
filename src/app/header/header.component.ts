@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-header',
@@ -9,4 +10,7 @@ import { RouterModule } from '@angular/router';
 })
 export class HeaderComponent {
 
+  LogOut(){
+    localStorage.removeItem("token")
+  }
 }

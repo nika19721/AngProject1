@@ -14,17 +14,16 @@ export class RegisterComponent {
 
   phoneNumber=""
   password=""
-
-    register(){
-    this.api.Registration({
+  register(){
+    let postObj={
       phoneNumber:this.phoneNumber,
       password:this.password,
       email:"",
-      firstName:"",
-      lastName:"",
-      role:""
-    }).subscribe(resp=>{
+      firstName: 'string',
+      LastName:"string",
+      role:"string"
+    }
+    this.api.Registration(postObj).subscribe((resp:any)=>{
       console.log(resp)
     })
-  }
-}
+  }}

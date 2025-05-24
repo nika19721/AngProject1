@@ -15,17 +15,19 @@ export class LoginComponent {
   phoneNumber=""
   password=""
 
-    register(){
-    this.api.Registration({
-      phoneNumber:this.phoneNumber,
-      password:this.password,
-      email:"",
-      firstName:"",
-      lastName:"",
-      role:""
-    }).subscribe((resp:any)=>{
-      console.log(resp.token)
-      localStorage.setItem("token", resp.token)
-    })
+ Login(){
+  let postObj = {
+    phoneNumber:this.phoneNumber,
+    password:this.password,
+    email:"",
+    firstName:"",
+    lastName:"",
+    role:""
   }
+
+  this.api.Login(postObj).subscribe((resp : any) =>{
+    console.log(resp.token)
+    localStorage.setItem("token", resp.token)
+  })
+ }
 }

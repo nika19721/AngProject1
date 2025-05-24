@@ -22,9 +22,9 @@ export class ApiService {
   GetBasket(){
     return this.http.get(`https://restaurant.stepprojects.ge/api/Baskets/GetAll`)
   }
-  GetFilter(id: number, spiciness: number) {
-    return this.http.get(`https://restaurant.stepprojects.ge/api/Products/GetFiltered?vegeterian=false&nuts=true&spiciness=${spiciness}&categoryId=${id}`);
-}
+  getFiltered(filterObj : any){
+    return this.http.get(`https://restaurant.stepprojects.ge/api/Products/GetFiltered?vegeterian=${filterObj.vegeterian}&nuts=${filterObj.nuts}&spiciness=${filterObj.spiciness}`)
+  }
   AddToCart(PostObj: BasketClass){
    return this.http.post(`https://restaurant.stepprojects.ge/api/Baskets/AddToBasket`, PostObj)
   }
@@ -36,5 +36,8 @@ export class ApiService {
   }
   Registration(Post:RegistrationClass){
     return this.http.post(`https://rentcar.stepprojects.ge/api/Users/register`, Post)
+  }
+  Login(Post:any){
+    return this.http.post(`https://rentcar.stepprojects.ge/api/Users/login`, Post)
   }
 }

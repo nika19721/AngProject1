@@ -1,6 +1,8 @@
 <div class="ThatParent">
     <div class="Parrent3">
-    <div class="categories" (click)="GetCatergory1()">
+        <div class="Parrent4">
+
+                <div class="categories" (click)="GetCatergory1()">
     <button class="Button2">Categories</button>
 
     <div class="THEParrent" *ngFor="let el of CategoryGet3">
@@ -10,17 +12,68 @@
     </div>
         <button class="Button4" (click)="ReturnToOriginal()">All</button>
 </div>
+        </div>
+
 
 </div>
 
 
-<div class="Parent">
+
+
+<div class="Parrentt1">
+                    <div class="FilterParent" style="display: flex; flex-direction: column;">
+                        <h1 class="FilterProductss" (click)="filterShow()">Filter Products</h1>
+                       <div class="FilterParrent1" *ngIf="showFilter">
+                        <h1>Filter</h1>
+                        <input class="inp1" [(ngModel)]="rangeValue" type="range" min="0" max="4">
+                        <div class="spicinessparent">
+                            <div class="ImgPaarent">
+                                <img class="Spiciness1" src="https://icons.iconarchive.com/icons/microsoft/fluentui-emoji-mono/256/Hot-Pepper-icon.png" alt="">
+                            </div>
+                             <p>:{{rangeValue}}</p>
+                        </div>
+
+            <div class="labelParent">
+                <label >nuts: <input [(ngModel)]="isNuts" type="checkbox"></label>
+            <label >vegetarian: <input [(ngModel)]="vegetarian" type="checkbox"></label>
+            </div>
+            <button class="filterbutton" (click)="filter()">apply filter</button>
+            <button class="resetbutton" (click)="reset()">Reset</button>
+                       </div> 
+            
+</div>
+    <div class="Parent">
+    
     <div class="CardBox" *ngFor="let el of ProductsArr">
         <img [src]="el.image" alt="">
         <h1>{{el.name}}</h1>
         <h2>{{el.spiciness}} Spiciness</h2>
+        <h2>{{el.vegeterian}}</h2>
         <h3>{{el.price}}$</h3>
         <button class="Button1" (click)="addToBasket(el.id, el.price)">Add to Basket</button>
     </div>
 </div>
 </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

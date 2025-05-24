@@ -1,0 +1,34 @@
+footer{
+    width: 100%;
+    height: 30vh;
+    background-color: hsl(70, 75%, 69%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    color: rgb(0, 0, 0);
+    .FirstLine{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        cursor: pointer;
+    }
+    .SecondLine{
+                display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        cursor: pointer;
+    }
+    .ThirdLine{
+                        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        cursor: pointer;
+    }
+}
