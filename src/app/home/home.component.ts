@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { Route, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { filter } from 'rxjs';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-home',
@@ -92,11 +93,17 @@ addToBasket(id:number, price:number){
   this.api.AddToCart(PostObj).subscribe(resp=>{
     console.log(resp)
   })
+  Swal.fire({
+  title: "Added to basket",
+  icon: "success",
+  draggable: true
+});
   }
   else{
     this.route.navigateByUrl("/login")
   }
 }
+
 
 
     

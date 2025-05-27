@@ -20,18 +20,18 @@ export class BasketComponent {
   itemAmount=signal(0)
     Increase(amount:number, id:number, price:number){
     this.itemAmount.set(amount+1)
-    console.log(this.itemAmount)
+    console.log(this.itemAmount())
     this.api.UpdateBasket({
-      quantity:this.itemAmount,
+      quantity:this.itemAmount(),
       price:price,
       ProductId:id
     }).subscribe(resp=>console.log(resp))
   }
     Decrease(amount:number, id:number, price:number){
-    this.itemAmount.set(amount+1)
-    console.log(this.itemAmount)
+    this.itemAmount.set(amount-1)
+    console.log(this.itemAmount())
     this.api.UpdateBasket({
-      quantity:this.itemAmount,
+      quantity:this.itemAmount(),
       price:price,
       ProductId:id
     }).subscribe(resp=>console.log(resp))

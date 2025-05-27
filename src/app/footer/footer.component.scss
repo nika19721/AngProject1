@@ -32,3 +32,10 @@ footer{
         cursor: pointer;
     }
 }
+
+@media screen and (max-width:400px) {
+    footer{
+        height: auto;
+        flex-wrap: wrap;
+    }    
+}

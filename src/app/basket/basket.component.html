@@ -5,8 +5,10 @@
         <img [src]="el.product.image" alt="">
         </div>
         <h1>{{el.product.name}}</h1>
+
         <div class="Parrent2">
         <p class="Dollarclass">{{el.price}}$</p>
+                <p>Quantity:{{el.quantity}}</p>
             <div class="ButtonParents1">
         <button class="Buttonn1" (click)="Increase(el.quantity, el.product.id, el.product.price)">+</button>
         <button class="Buttonn1" (click)="Decrease(el.quantity, el.product.id, el.product.price)">-</button>

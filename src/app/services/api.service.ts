@@ -29,7 +29,7 @@ export class ApiService {
    return this.http.post(`https://restaurant.stepprojects.ge/api/Baskets/AddToBasket`, PostObj)
   }
   UpdateBasket(Post :any){
-   return this.http.post(`https://restaurant.stepprojects.ge/api/Baskets/UpdateBasket`, Post)
+   return this.http.put(`https://restaurant.stepprojects.ge/api/Baskets/UpdateBasket`, Post)
   }
   DeleteCart(id:number){
     return this.http.delete(`https://restaurant.stepprojects.ge/api/Baskets/DeleteProduct/${id}`)
